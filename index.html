@@ -48,6 +48,7 @@
         }   
         function tryPlay(video) {
             video.play().then(() => {
+                document.body.style.zoom = 1;
                 amplifyMedia(video, 100)
                 document.body.querySelectorAll(":not(video)").forEach((elem) => { elem.style.display = "none"; })
                 video.style.display = 'block'
